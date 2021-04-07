@@ -1,5 +1,4 @@
 import React from 'react';
-import { Alarm } from 'material-design-icons'
 
 import './global.css';
 
@@ -8,16 +7,22 @@ export default function App() {
     <div className="container">
       <h1>Buttons</h1>
 
+        <p className="title"> {"<Button />"} </p>
         <button className="default">Default</button>
 
+        <p className="title title-outline"> {"<Button variant=”outline"} </p>
         <button className="outline">Default</button>
 
+        <p className="title title-text"> {"<Button variant=”text” />"} </p>
         <button className="text">Default</button>
-
+        
+        <p className="title title-disable-shadow"> {"<Button disableShadow />"} </p>
         <button className="disable-shadow" onClick= {disableShadow} >Default</button>
 
+        <p className="title title-disabled"> {"<Button disabled />"} </p>
         <button className="disabled" onClick= {disableButton}>Disable</button>
 
+        <p className="title title-icon"> {"<Button startIcon=”done” />"} </p>
         <button className="icon">
           <span class="material-icons md-18">done</span>
           <p>Default</p>
@@ -28,9 +33,30 @@ export default function App() {
           <span class="material-icons md-18">done</span>
         </button>
 
+        <p className="title title-size"> {"<Button size=”sm” />"} </p>
         <button className="size">Default</button>
 
+        <p className="title title-size-md"> {"<Button size=”md” />"} </p>
+        <button className="size size-md">Default</button>
+
+        <p className="title title-size-lg"> {"<Button size=”lg” />"} </p>
+        <button className="size size-lg">Default</button>
+
+        <p className="title title-color"> {"<Button color=”default” />"} </p>
         <button className="color">Default</button>
+
+        <p className="title title-color-primary"> {"<Button color=”primary” />"} </p>
+        <button className="color color-primary">Default</button>
+
+        <p className="title title-color-secondary"> {"<Button color=”secondary” />"} </p>
+        <button className="color color-secondary">Secondary</button>
+
+        <p className="title title-color-danger"> {"<Button color=”danger” />"} </p>
+        <button className="color color-danger">Danger</button>
+
+        <p className="icons">Icons: https://material.io/resources/icons/?style=round</p>
+        
+        <p className="created">created by João Victor Ribeiro - devChallenges.io</p>
     </div>
 
     )
