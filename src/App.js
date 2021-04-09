@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './global.css';
 
 export default function App() {
+  const [buttonState, setButtonState] = useState({
+    isLeftButton: true
+  });
+
+
+
   return (
     <div className="container">
       <h1>Buttons</h1>
@@ -23,15 +29,19 @@ export default function App() {
         <button className="disabled" onClick= {disableButton}>Disable</button>
 
         <p className="title title-icon"> {"<Button startIcon=”done” />"} </p>
-        <button className="icon">
-          <span class="material-icons md-18">done</span>
-          <p>Default</p>
-        </button>
-
-        <button className="icon">
-          <p>Default</p>
-          <span class="material-icons md-18">done</span>
-        </button>
+        
+        {
+          buttonState.isLeftButton ?
+            <button onClick={() => toogleIconButton()} className="icon">
+              <span className="material-icons md-18">done</span>
+              <p>Default</p>  
+            </button>
+          :
+            <button onClick={() => toogleIconButton()} className="icon">
+              <p>Default</p>
+              <span className="material-icons md-18">done</span>
+            </button>
+        }
 
         <p className="title title-size"> {"<Button size=”sm” />"} </p>
         <button className="size">Default</button>
@@ -67,7 +77,7 @@ export default function App() {
     console.log(buttons);
 
     for (let button of buttons) {
-      if (button.style.boxShadow != '')
+      if (button.style.boxShadow !== '')
         buttonsWithShadow.push(buttons);
     }
 
@@ -84,6 +94,18 @@ export default function App() {
       button[0].classList.remove("disabled-text")
       button[0].textContent = "Disable"
     }
+  }
 
+  function toogleIconButton() {
+    let _isLeftButton;
+    if(buttonState.isLeftButton) {
+      _isLeftButton = false
+    } else {
+      _isLeftButton = true
+    }
+
+    setButtonState({
+      isLeftButton: _isLeftButton
+    })
   }
 }
