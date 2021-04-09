@@ -8,7 +8,6 @@ export default function App() {
   });
 
 
-
   return (
     <div className="container">
       <h1>Buttons</h1>
@@ -43,6 +42,58 @@ export default function App() {
             </button>
         }
 
+        {
+          buttonState.isLeftButton ?
+            <button onClick={() => toogleIconButton()} className="icon icon-2">
+              <span className="material-icons md-18">search</span>
+              <p>Default</p>  
+            </button>
+          :
+            <button onClick={() => toogleIconButton()} className="icon icon-2">
+              <p>Default</p>
+              <span className="material-icons md-18">search</span>
+            </button>
+        }
+
+        {
+          buttonState.isLeftButton ?
+            <button onClick={() => toogleIconButton()} className="icon icon-3">
+              <span className="material-icons md-18">home</span>
+              <p>Default</p>  
+            </button>
+          :
+            <button onClick={() => toogleIconButton()} className="icon icon-3">
+              <p>Default</p>
+              <span className="material-icons md-18">home</span>
+            </button>
+        }
+
+        {
+          buttonState.isLeftButton ?
+            <button onClick={() => toogleIconButton()} className="icon icon-4">
+              <span className="material-icons md-18">info</span>
+              <p>Default</p>  
+            </button>
+          :
+            <button onClick={() => toogleIconButton()} className="icon icon-4">
+              <p>Default</p>
+              <span className="material-icons md-18">info</span>
+            </button>
+        }
+
+        {
+          buttonState.isLeftButton ?
+            <button onClick={() => toogleIconButton()} className="icon icon-5">
+              <span className="material-icons md-18">delete</span>
+              <p>Default</p>  
+            </button>
+          :
+            <button onClick={() => toogleIconButton()} className="icon icon-5">
+              <p>Default</p>
+              <span className="material-icons md-18">delete</span>
+            </button>
+        }
+
         <p className="title title-size"> {"<Button size=”sm” />"} </p>
         <button className="size">Default</button>
 
@@ -68,7 +119,6 @@ export default function App() {
         
         <p className="created">created by João Victor Ribeiro - devChallenges.io</p>
     </div>
-
     )
 
   function disableShadow() {

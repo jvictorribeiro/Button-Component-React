@@ -39,6 +39,11 @@ button {
     border-radius: 6px;
 }
 
+button:hover {
+    background: #0039CB;
+    box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);
+}
+
 .title {
     position: absolute;
     width: 60px;
@@ -202,10 +207,6 @@ button {
     color: #FFFFFF;
 }
 
-.disable-shadow:hover {
-    background: rgba(41, 98, 255, 0.85);
-    color: #FFFFFF;
-}
 
 .disabled {
     left: 319px;
@@ -233,6 +234,22 @@ button {
     background: #2962FF;
     box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
     color: #FFFFFF;
+}
+
+.icon-2 {
+    left: 523px;
+}
+
+.icon-3 {
+    left: 731px;
+}
+
+.icon-4 {
+    left: 971px;
+}
+
+.icon-5 {
+    left: 1179px;
 }
 
 .size{
